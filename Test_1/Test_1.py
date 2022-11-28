@@ -29,10 +29,10 @@ list = [1,2,3]
 list1= ['1','1','1']
 
 #ввод данных
-b1 = input()
+b1 = input('a= ')
 #число
-a1=int(input())
-a2=float(input())
+a1=int(input('a= '))
+a2=float(input('a= '))
 
 #операции
 # +-*/
@@ -86,90 +86,93 @@ else:
     print(b)
 
 
-# for
+## for
 
-for i in 1,2,3,4,5:
-    print(i**2)
+#for i in 1,2,3,4,5:
+#    print(i**2)
 
-list1=[1,2,3,4,5]
-for i in list1:
-    print(i**2)
+#list1=[1,2,3,4,5]
+#for i in list1:
+#    print(i**2)
 
-r = range(10)
-for i in r:
-    print(i**2)
+#r = range(10)
+#for i in r:
+#    print(i**2)
 
-for i in range(10):
-    print(i**2)
+#for i in range(10):
+#    print(i**2)
 
-for i in range(1,10,2):     # [1,10) с шагом 2
-    print(i**2)
+#for i in range(1,10,2):     # [1,10) с шагом 2
+#    print(i**2)
 
-for i in 'qwerty':
-    print(i)
+#for i in 'qwerty':
+#    print(i)
 
 
-text = 'съешь ещЄ этих м€гких французских булок'
-print(len(text)) # 39
-print('ещЄ' in text) # True
-print(text.isdigit()) # False
-print(text.islower()) # True
-print(text.replace('ещЄ','≈ў®')) #
-for c in text:
-    print(c)
+#text = 'съешь ещЄ этих м€гких французских булок'
+#print(len(text)) # 39
+#print('ещЄ' in text) # True
+#print(text.isdigit()) # False
+#print(text.islower()) # True
+#print(text.replace('ещЄ','≈ў®')) #
+#for c in text:
+#    print(c)
 
-text = 'съешь ещЄ этих м€гких французских булок'
-print(text[0]) # c
-print(text[1]) # ъ
-print(text[len(text)-1]) # к
-print(text[-5]) # б
-print(text[:]) # print(text)
-print(text[:2]) # съ
-print(text[len(text)-2:]) # ок
-print(text[2:9]) # ешь ещЄ
-print(text[6:-18]) # ещЄ этих м€гких
-print(text[0:len(text):6]) # сеикакл
-print(text[::6]) # сеикакл
-text = text[2:9] + text[-5] + text[:2] # ...
+#text = 'съешь ещЄ этих м€гких французских булок'
+#print(text[0]) # c
+#print(text[1]) # ъ
+#print(text[len(text)-1]) # к
+#print(text[-5]) # б
+#print(text[:]) # print(text)
+#print(text[:2]) # съ
+#print(text[len(text)-2:]) # ок
+#print(text[2:9]) # ешь ещЄ
+#print(text[6:-18]) # ещЄ этих м€гких
+#print(text[0:len(text):6]) # сеикакл
+#print(text[::6]) # сеикакл
+#text = text[2:9] + text[-5] + text[:2] # ...
 
-numbers = [1, 2, 3, 4, 5]
-print(numbers) # [1, 2, 3, 4, 5]
-numbers = list(range(1, 6))
-print(numbers) # [1, 2, 3, 4, 5]
-numbers[0] = 10
-print(numbers) # [10, 2, 3, 4, 5]
-for i in numbers:
-    i *= 2
-    print(i) # [20, 4, 6, 8, 10]
-print(numbers) # [10, 2, 3, 4, 5]
+#numbers = [1, 2, 3, 4, 5]
+#print(numbers) # [1, 2, 3, 4, 5]
+#numbers = list(range(1, 6))
+#print(numbers) # [1, 2, 3, 4, 5]
+#numbers[0] = 10
+#print(numbers) # [10, 2, 3, 4, 5]
+#for i in numbers:
+#    i *= 2
+#    print(i) # [20, 4, 6, 8, 10]
+#print(numbers) # [10, 2, 3, 4, 5]
 
-colors = ['red', 'green', 'blue']
-for e in colors:
-    print(e) # red green blue
-for e in colors:
-    print(e*2) # redred greengreen blueblue
-colors.append('gray') # добавить в конец
-print(colors == ['red', 'green', 'blue', 'gray']) # True
-colors.remove('red') #del colors[0] # удалить элемент
+#colors = ['red', 'green', 'blue']
+#for e in colors:
+#    print(e) # red green blue
+#for e in colors:
+#    print(e*2) # redred greengreen blueblue
+#colors.append('gray') # добавить в конец
+#print(colors == ['red', 'green', 'blue', 'gray']) # True
+#colors.remove('red') #del colors[0] # удалить элемент
 
-def function_name(x):
-    return x**2
-# body line 1
-# . . .
-# body line n
- # optional return
+#def function_name(x):
+#    return x**2
+## body line 1
+## . . .
+## body line n
+# # optional return
 
-def f(x):
-    if x == 1:
-        return '÷елое'
-    elif x == 2.3:
-        return 23
-    else:
-        return
+#def f(x):
+#    if x == 1:
+#        return '÷елое'
+#    elif x == 2.3:
+#        return 23
+#    else:
+#        return
 
-print(f(1)) # ÷елое
-print(f(2.3)) # 23
-print(f(28)) # None
-print(type(f(1))) # str
-print(type(f(2.3))) # int
-print(type(f(28))) # NoneType
+#print(f(1)) # ÷елое
+#print(f(2.3)) # 23
+#print(f(28)) # None
+#print(type(f(1))) # str
+#print(type(f(2.3))) # int
+#print(type(f(28))) # NoneType
+
+
+#лекци€ 2 
