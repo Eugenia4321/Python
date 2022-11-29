@@ -10,8 +10,8 @@ from operator import countOf
 from re import A
 
 
-people = int(input('people = '))
-count = int(input('count = '))
+people =13# int(input('people = '))
+count =4# int(input('count = '))
 list_people = list(range(0, people ))
 list_coins = list(range(0, people ))
 #print('list_coins',list_coins)
@@ -23,6 +23,10 @@ for i in range(people - 1):
     a = count%len(list_people)-1
    # print('a',a)
     index_coins=0
+    if count <len(list_people):
+        for cc in range(a+1,len(list_people)):
+       # for cc in list_people[a+1:]:
+            list_coins[list_people[cc]]+=2
     for ii in range(count):   
         if list_coins[list_people[index_coins]]==-1:
               index_coins+=1
