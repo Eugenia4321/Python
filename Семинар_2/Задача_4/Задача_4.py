@@ -20,7 +20,7 @@ for i in range(people):
 #print('list_coins',list_coins)
 for i in range(people - 1):
    # print('Step',i)
-    a = count%len(list_people)-1
+    a = count%len(list_people)-1        #остаток если каунт больше длины
    # print('a',a)
     index_coins=0
     if count <len(list_people):
