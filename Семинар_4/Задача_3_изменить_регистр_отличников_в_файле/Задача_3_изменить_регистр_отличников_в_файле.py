@@ -8,7 +8,11 @@ from typing import List
 
 
 def get_list_of_students(name_performance_file : str ="performance.txt") -> List:
-    """
+    """ Принимает строку с названием файла, открывает файл, считывает данные и записываетпострочко в списко, возвращает список
+    Arguments:
+             (str)name_performance_file
+        Return:
+            (list)academic_performance
     """
     with open(name_performance_file, "r") as file_academic_performance:
         for line in file_academic_performance.readlines():
@@ -17,7 +21,11 @@ def get_list_of_students(name_performance_file : str ="performance.txt") -> List
     return academic_performance
 
 def change_register(academic_performance : List[str])-> List:
-    """
+    """ Принимает список строк, изменяет регистры на верхний у людей с оценкой выше 5, возращает изменненый список строк
+    Arguments:
+             (list)academic_performance 
+        Return:
+            (list)academic_performance
     """
     for i in range(len(academic_performance)-1):
         academic_record=academic_performance[i]
@@ -28,7 +36,11 @@ def change_register(academic_performance : List[str])-> List:
     return academic_performance
 
 def overwriting_list_of_students(academic_performance: list,name_performance_file: str="performance.txt"):
-    """
+    """ Принимает список строк и строку с названием файла ,перезаписывает список строк в файл.
+    Arguments:
+             (list)academic_performance
+             (str)name_performance_file
+       
     """
     with open(name_performance_file, "w") as output_file_academic_performance:
         for i in range(len(academic_performance)):

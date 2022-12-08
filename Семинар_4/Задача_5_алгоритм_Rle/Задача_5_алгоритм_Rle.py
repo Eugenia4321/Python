@@ -6,7 +6,10 @@ from typing import List
 
 
 def get_data_from_file(name_input_file : str ="unencrypted.txt") -> List:
-    """
+    """ Принимает строку с называнием файла, открывает файл, и возвращает считанную строку.
+    Arguments:
+             (str)name_input_file
+       
     """
     with open(name_input_file, "r") as input_file:
         input_data =input_file.read()   
@@ -14,8 +17,12 @@ def get_data_from_file(name_input_file : str ="unencrypted.txt") -> List:
     input_file.close()
     return input_data
 
-def encryption_RLE(input_date:Str):
-    """
+def encryption_RLE(input_date:Str) -> List:
+    """ Принимает строку, шифрует методом RLE и возращает зашифрованную строку.
+    Arguments:
+            (str)input_date
+        Return:
+            (str)output_data 
     """
     char_count=1
     output_data=''
@@ -37,7 +44,13 @@ def encryption_RLE(input_date:Str):
 
 
 
-def decryption_RLE(input_date:Str):
+def decryption_RLE(input_date:Str) -> List:
+    """ Принимает строку, дешифрует методом RLE и возращает дешифрованную строку.
+    Arguments:
+            (str)input_date
+        Return:
+            (str)output_data 
+    """
     output_data=''
     find_number_of_char=''
     for i in range(len(input_date)):        
@@ -52,7 +65,13 @@ def decryption_RLE(input_date:Str):
     return output_data 
 
 def writing_data_to_file(output_date:Str,name_output_file:Str ="unencrypted.txt"):
-    """
+    """ Принимает строку данных и строку с называнием файла, открывает файл и перезаписывает строку с данными в него.
+    Arguments:
+             (str)output_date
+             (str)name_output_file
+
+
+        
     """
     with open(name_output_file, "w") as output_file:        
         output_file.write(output_date)
