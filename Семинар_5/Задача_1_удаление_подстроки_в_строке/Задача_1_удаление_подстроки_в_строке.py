@@ -4,7 +4,7 @@
 #Пугать ты галок пугай => заданная строка "галок" => Пугать ты пугай
 #Пугать ты галок пугай => заданная строка "пуг" => Пугать ты галок
 
-input_data = list(input('Enter text:\n').split())
+input_data = input('Enter text:\n').split()
 input_word = input('Enter word:\n')
 
 def delete_word(input_data:list,input_word:str) -> str:

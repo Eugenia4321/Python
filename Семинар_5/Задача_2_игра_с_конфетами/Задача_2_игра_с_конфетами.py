@@ -1,7 +1,7 @@
 import random
 
-candy_count = int(input('Enter candy count = '))
-step_count = int(input('Enter step count = '))
+
+
 
 def game_two_players(candy_count:int,step_count:int):
     """ Принимает общее количество предметов и максимальный шаг, позволяет сыграть в игру 2 игрокам и печатает имя победителя
@@ -26,7 +26,7 @@ def game_two_players(candy_count:int,step_count:int):
                 player_number=1
         
 
-#game_two_players(candy_count,step_count)
+
 
 def game_one_players(candy_count:int,step_count:int):
     """ Принимает общее количество предметов и максимальный шаг, позволяет сыграть в игру игроку с ботом и печатает имя победителя
@@ -57,6 +57,14 @@ def game_one_players(candy_count:int,step_count:int):
                 player_who='Bot'
             else:
                 player_who='Player'
+
+candy_count = int(input('Enter candy count = '))
+
+step_count = int(input('Enter step count = '))
+
+while step_count>candy_count/3:
+    print('Too large step!')
+    step_count = int(input('Enter step count = '))
 
 #game_two_players(candy_count,step_count)
 game_one_players(candy_count,step_count)

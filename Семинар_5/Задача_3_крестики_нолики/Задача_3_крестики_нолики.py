@@ -41,26 +41,32 @@ def game(game_map:list):
              (int)player_number
     """
     player_number = 1
-    win_chek=True 
-    for i in range(0,9):
-        step = int(input(f'\nPlayer {player_number} do step : \n'))
-        if game_map[step-1] == '0' or game_map[step-1] == 'X':
-            print('Error\n')
+   # win_chek=True 
+    for i in range(0,9): #while 
+        step = input_step(game_map,player_number)
+ #       step = int(input(f'\nPlayer {player_number} do step : \n'))             
+        if player_number==1:
+            game_map[step-1] = 'X'
+            player_number=2               
         else:
-            if player_number==1:
-                game_map[step-1] = 'X'
-                player_number=2               
-            else:
-                game_map[step-1] = '0'
-                player_number=1
+            game_map[step-1] = '0'
+            player_number=1
         print_game_map(game_map)
         if not win_chek_function(game_map):
             return player_number
     return 0
 
-
-
-
+def input_step(game_map,player_number):    #проверкун на 0-9 потом проверку на х и 0
+    while True:
+        step = int(input(f'\nPlayer {player_number} do step : \n'))
+        if 0<step<9:
+            if  game_map[step-1] != '0' and game_map[step-1] != 'X' :
+                return step
+            else:
+                print('error')
+        else:
+            print('error')
+    
 def win_chek_function(game_map:list):
     """�������� �� ���������� - ���������� False ���� ���� �� ������� �������
         
