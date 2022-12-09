@@ -4,6 +4,12 @@ candy_count = int(input('Enter candy count = '))
 step_count = int(input('Enter step count = '))
 
 def game_two_players(candy_count:int,step_count:int):
+    """ Принимает общее количество предметов и максимальный шаг, позволяет сыграть в игру 2 игрокам и печатает имя победителя
+    Arguments:
+             (int)candy_count
+             (int)step_count
+
+    """
     player_number=1
     while candy_count!=0:
         step_player = int(input(f'Player {player_number} takes candy: '))
@@ -23,6 +29,12 @@ def game_two_players(candy_count:int,step_count:int):
 #game_two_players(candy_count,step_count)
 
 def game_one_players(candy_count:int,step_count:int):
+    """ Принимает общее количество предметов и максимальный шаг, позволяет сыграть в игру игроку с ботом и печатает имя победителя
+    Arguments:
+             (int)candy_count
+             (int)step_count
+
+    """    
 
     player_who='Player'
     while candy_count!=0:
@@ -30,6 +42,10 @@ def game_one_players(candy_count:int,step_count:int):
             step_player = int(input(f'{player_who} takes candy: '))
         else:         
             step_player = random.randint(1, min(step_count,candy_count))
+            if step_count<candy_count<=step_count*2:
+                step_player =candy_count-step_count-1
+            if candy_count<=step_count:
+                step_player =candy_count
         if candy_count-step_player<0 or step_player>step_count:
             print('You cant take so many!')
         else:
@@ -42,4 +58,5 @@ def game_one_players(candy_count:int,step_count:int):
             else:
                 player_who='Player'
 
+#game_two_players(candy_count,step_count)
 game_one_players(candy_count,step_count)

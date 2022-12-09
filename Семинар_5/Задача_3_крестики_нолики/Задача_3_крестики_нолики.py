@@ -1,7 +1,9 @@
 
 game_map=['1','2','3','4','5','6','7','8','9']
 
-def print_game_map(game_map):
+def print_game_map(game_map:list):
+    """ Функция принимает список со значением полей и  печатает рисунок крестиков - ноликов
+    """
     i=0
     for _ in range(3):
          print(f'| {game_map[i]} | {game_map[i+1]} | {game_map[i+2]}|')
@@ -31,7 +33,13 @@ print_game_map(game_map)
 #        print(f'Player 2 WIN')
 #    else:
 #        print(f'Player 1 WIN')
-def game(game_map):
+def game(game_map:list):
+    """ Игра в крестики нолики, принимает поле и возвращает номер проигравшего игрока или 0 если ничья
+    Arguments:
+             (list)game_map            
+        Return:
+             (int)player_number
+    """
     player_number = 1
     win_chek=True 
     for i in range(0,9):
@@ -53,7 +61,10 @@ def game(game_map):
 
 
 
-def win_chek_function(game_map):
+def win_chek_function(game_map:list):
+    """�������� �� ���������� - ���������� False ���� ���� �� ������� �������
+        
+    """
     if game_map[0]==game_map[1]==game_map[2]:
         return False 
     if game_map[3]==game_map[4]==game_map[5]:
