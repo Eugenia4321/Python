@@ -48,9 +48,9 @@ def input_step(game_map,player_number):
             if  game_map[step-1] != '0' and game_map[step-1] != 'X' :
                 return step
             else:
-                print('error')
+                print('error. the slot is closed ')
         else:
-            print('error')
+            print('error. enter step for 1 to 9')
     
 def win_chek_function(game_map:list):
     """Проверка на победителя, возвращает False если игрок победил и игра закончена
